@@ -19,10 +19,9 @@
    // 空 DIV
   let xdiv = document.createElement("div");
   xdiv.id = "google_translate_element";
-  // 主體 CSS
+  // 本體 CSS
   let xcss = document.createElement("style");
   xcss.innerHTML = "body{top:0px!important;}.goog-te-banner-frame.skiptranslate{display:none!important;}select.goog-te-combo,#xcancel{z-index: 88888888;opacity:0.5;position:fixed;font-size:8px; font-weight:bold;width:90px;left:5px;top:55px;color:#666;background:#f8f8f8;border:solid #aaa 2px;}#xcancel{top:85px;opacity:0;}select.goog-te-combo:hover,#xcancel:hover{opacity:1;}#google_translate_element{display:block;width:0px;overflow:hidden;}";
-  // 主體 JS
  // 關閉按鈕
   let button = document.createElement("button");
   button.innerHTML = "取消翻譯";
@@ -40,7 +39,7 @@
       return;}
     }
   };
-  // 翻譯選單
+  // 翻譯選單/本體
 
   function googleTranslateElementInit(){
     new google.translate.TranslateElement({
@@ -66,7 +65,7 @@
   if(pLang==uLang){
     // 使用者語言與網頁相同不動作
   } else if (pLang!==uLang){
-    // 網頁語言不是指定語言：寫入空 DIV 、主體 JS 和 CSS
+    // 網頁語言不是指定語言：寫入
     window.onload = googleTranslateElementInit;
     document.body.appendChild(xdiv);
     document.head.appendChild(xcss);
