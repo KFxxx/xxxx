@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Google網頁翻譯
 // @author       Kaiter-Plus
-// @namespace    https://github.com/KFxxx/xxxx/blame/main/GT.js
+// @namespace    https://github.com/KFxxx/xxxx/blob/main/GT.js
 // @description
 // @version      1.42
 // @license      BSD-3-Clause
