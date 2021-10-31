@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Google網頁翻譯
 // @author       Kaiter-Plus
-// @namespace    https://gitee.com/kfxxx/xxx/blob/master/X.js
-// @description  
+// @namespace    https://github.com/KFxxx/xxxx/blame/main/GT.js
+// @description
 // @version      1.42
 // @license      BSD-3-Clause
 // @icon         https://cdn-icons.flaticon.com/png/512/2097/premium/2097948.png?token=exp=1635644051~hmac=21e2ccad44c05e9840c100b7b9a02bf0
@@ -12,20 +12,17 @@
 
 ;(function () {
   'use strict'
-  // head
-  const head = document.head;
-  // body
-  const body = document.body;
   // 抓網頁使用的語言
   const pLang = document.documentElement.lang.toLowerCase().substr(0,5);
   // 抓自己使用的語言
   const uLang = (navigator.language||navigator.browserLanguage).toLowerCase().substr(0,5);
-  // 空 DIV
+   // 空 DIV
   let xdiv = document.createElement("div");
   xdiv.id = "google_translate_element";
   // 主體 CSS
   let xcss = document.createElement("style");
   xcss.innerHTML = "body{top:0px!important;}.goog-te-banner-frame.skiptranslate{display:none!important;}select.goog-te-combo,#xcancel{z-index: 88888888;opacity:0.5;position:fixed;font-size:8px; font-weight:bold;width:90px;left:5px;top:55px;color:#666;background:#f8f8f8;border:solid #aaa 2px;}#xcancel{top:85px;opacity:0;}select.goog-te-combo:hover,#xcancel:hover{opacity:1;}#google_translate_element{display:block;width:0px;overflow:hidden;}";
+  // 主體 JS
  // 關閉按鈕
   let button = document.createElement("button");
   button.innerHTML = "取消翻譯";
@@ -60,11 +57,11 @@
     },100);
   };
   (function() {
-  var googleTranslateScript = document.createElement('script');
-  googleTranslateScript.type = 'text/javascript';
+  var googleTranslateScript = document.createElement("script");
+  googleTranslateScript.type = "text/javascript";
   googleTranslateScript.async = true;
-  googleTranslateScript.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( googleTranslateScript );
+  googleTranslateScript.src = "https://translate.google.com/translate_a/element.js";
+  ( document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0] ).appendChild( googleTranslateScript );
   })();
   if(pLang==uLang){
     // 使用者語言與網頁相同不動作
