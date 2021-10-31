@@ -6,7 +6,7 @@
 // @version      0.01
 // @license      BSD-3-Clause
 // @icon         https://raw.githubusercontent.com/KFxxx/xxxx/main/2875363.png
-// @include      *://*
+// @include      *
 // @run-at       document-end
 // ==/UserScript==
 
