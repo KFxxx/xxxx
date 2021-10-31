@@ -3,7 +3,7 @@
 // @name:en      Google Translate for browser 
 // @author       KFxxx
 // @namespace    https://github.com/KFxxx/xxxx/blob/main/GT.js
-// @description 自動（可關閉）網頁翻譯（預設為其他語言自動轉繁體）
+// @description  自動（可關閉）網頁翻譯（預設為其他語言自動轉繁體）
 // @description:en Google Translate for browser.. 
 // @version      0.01
 // @license      https://creativecommons.org/licenses/by/4.0/
@@ -13,7 +13,7 @@
 // ==/UserScript==
 
 ;(function () {
-  'use strict'
+  "use strict"
   // 抓網頁使用的語言
   const pLang = document.documentElement.lang.toLowerCase().substr(0,5);
   // 抓自己使用的語言
