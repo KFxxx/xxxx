@@ -5,7 +5,7 @@
 // @description
 // @version      0.01
 // @license      BSD-3-Clause
-// @icon         https://cdn-icons.flaticon.com/png/512/2097/premium/2097948.png?token=exp=1635644051~hmac=21e2ccad44c05e9840c100b7b9a02bf0
+// @icon         https://raw.githubusercontent.com/KFxxx/xxxx/main/2875363.png
 // @include      *://*
 // @run-at       document-end
 // ==/UserScript==
