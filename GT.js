@@ -1,4 +1,4 @@
-// ==UserScript==
+ // ==UserScript==
 // @name G翻
 // @description google 翻譯
 // @version 1.0
@@ -6,6 +6,7 @@
 // @license MIT
 // @include *://*
 // @run-at document-end
+// @grant none
 // ==/UserScript==
   // head
   const head = document.head;
@@ -22,9 +23,7 @@
   let xcss = document.createElement("style");
   xcss.innerHTML = "body{top:0px!important;}.goog-te-banner-frame.skiptranslate{display:none!important;}select.goog-te-combo,#xcancel{z-index: 88888888;opacity:0.5;position:fixed;font-size:8px; font-weight:bold;width:90px;left:5px;top:55px;color:#666;background:#f8f8f8;border:solid #aaa 2px;}#xcancel{top:85px;opacity:0;}select.goog-te-combo:hover,#xcancel:hover{opacity:1;}#google_translate_element{display:block;width:0px;overflow:hidden;}";
   // 主體 JS
-  let xscript = document.createElement("script");
-  xscript.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-  // 關閉按鈕
+ // 關閉按鈕
   let button = document.createElement("button");
   button.innerHTML = "取消翻譯";
   button.id = "xcancel";
@@ -70,7 +69,6 @@
     // 網頁語言不是指定語言：寫入空 DIV 、主體 JS 和 CSS
     window.onload = googleTranslateElementInit;
     document.body.appendChild(xdiv);
-    document.head.appendChild(xscript);
     document.head.appendChild(xcss);
   }else{
     // 其他
