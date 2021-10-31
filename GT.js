@@ -6,7 +6,6 @@
 // @license MIT
 // @include *://*
 // @run-at document-end
-// @grant none
 // ==/UserScript==
   // head
   const head = document.head;
