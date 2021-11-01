@@ -1,8 +1,10 @@
 // ==UserScript==
 // @name         Google網頁翻譯
+// @name:en      Google Translate for browser 
 // @author       KFxxx
 // @namespace    https://github.com/KFxxx/xxxx/blob/main/GT.js
-// @description
+// @description 自動（可關閉）網頁翻譯（預設為其他語言自動轉繁體）
+// @description:en Google Translate for browser.. 
 // @version      0.02
 // @license      CC v4.0 https://creativecommons.org/licenses/by/4.0/
 // @icon         https://raw.githubusercontent.com/KFxxx/xxxx/main/2875363.png
