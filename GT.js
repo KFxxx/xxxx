@@ -1,15 +1,15 @@
 // ==UserScript==
-// @name         Google網頁翻譯
-// @name:en      Google Translate for browser 
-// @author       KFxxx
-// @namespace    https://github.com/KFxxx/xxxx/blob/main/GT.js
-// @description 自動（可關閉）網頁翻譯（預設為其他語言自動轉繁體）
+// @name           Google網頁翻譯
+// @name:en        Google Translate for browser 
+// @author         KFxxx
+// @namespace      https://github.com/KFxxx/xxxx/blob/main/GT.js
+// @description    自動（可關閉）網頁翻譯（預設為其他語言自動轉繁體）
 // @description:en Google Translate for browser.. 
-// @version      0.02
-// @license      CC v4.0 https://creativecommons.org/licenses/by/4.0/
-// @icon         https://raw.githubusercontent.com/KFxxx/xxxx/main/2875363.png
-// @include      *
-// @run-at       document-end
+// @version        0.02
+// @license        CC v4.0 https://creativecommons.org/licenses/by/4.0/
+// @icon           https://raw.githubusercontent.com/KFxxx/xxxx/main/2875363.png
+// @include        *
+// @run-at         document-end
 // @note         20211101 v0.02 --- 補上一開始忘記加上消除 text hover 時候煩人的 tipssss
 // ==/UserScript==
 ;(function () {
@@ -23,7 +23,7 @@
   xdiv.id = "google_translate_element";
   // 本體 CSS
   let xcss = document.createElement("style");
-  xcss.innerHTML = "body{top:0px!important;}.goog-te-banner-frame.skiptranslate{display:none!important;}select.goog-te-combo,#xcancel{z-index: 88888888;opacity:0.5;position:fixed;font-size:8px; font-weight:bold;width:90px;left:5px;top:55px;color:#666;background:#f8f8f8;border:solid #aaa 2px;}#xcancel{top:85px;opacity:0;}select.goog-te-combo:hover,#xcancel:hover{opacity:1;}#google_translate_element{display:block;width:0px;overflow:hidden;}";
+  xcss.innerHTML = ".goog-text-highlight{background-color:transparent!important;border:none!important;box-shadow:none!important;}body{top:0px!important;}.goog-te-banner-frame.skiptranslate{display:none!important;}select.goog-te-combo,#xcancel{z-index: 88888888;opacity:0.5;position:fixed;font-size:8px; font-weight:bold;width:90px;left:5px;top:55px;color:#666;background:#f8f8f8;border:solid #aaa 2px;}#xcancel{top:85px;opacity:0;}select.goog-te-combo:hover,#xcancel:hover{opacity:1;}#google_translate_element{display:block;width:0px;overflow:hidden;}";
   // 關閉按鈕
   let button = document.createElement("button");
   button.innerHTML = "取消翻譯";
