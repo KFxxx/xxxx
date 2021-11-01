@@ -4,14 +4,14 @@
 // @namespace    https://github.com/KFxxx/xxxx/blob/main/GT.js
 // @description
 // @version      0.02
-// @license      BSD-3-Clause
+// @license      CC v4.0 https://creativecommons.org/licenses/by/4.0/
 // @icon         https://raw.githubusercontent.com/KFxxx/xxxx/main/2875363.png
 // @include      *
 // @run-at       document-end
-// @note         20211101 v0.02 --- 補刪了 text hover 時候煩人的 tipssss (謝提醒
+// @note         20211101 v0.02 --- 補上一開始忘記加上消除 text hover 時候煩人的 tipssss
 // ==/UserScript==
 ;(function () {
-  'use strict'
+  "use strict"
   // 抓網頁使用的語言
   const pLang = document.documentElement.lang.toLowerCase().substr(0,5);
   // 抓自己使用的語言
@@ -49,7 +49,7 @@
       document.body.appendChild(button);
     setTimeout(function(){
       var select = document.querySelector("select.goog-te-combo");
-      // 自動翻譯語言 
+      // 自動翻譯語言
       select.value = "zh-TW";
       select.dispatchEvent(new Event("change"));
       // 刪除顯示原文 POP
