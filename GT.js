@@ -1,19 +1,17 @@
 // ==UserScript==
 // @name         Google網頁翻譯
-// @name:en      Google Translate for browser 
 // @author       KFxxx
 // @namespace    https://github.com/KFxxx/xxxx/blob/main/GT.js
-// @description  自動（可關閉）網頁翻譯（預設為其他語言自動轉繁體）
-// @description:en Google Translate for browser.. 
-// @version      0.01
-// @license      https://creativecommons.org/licenses/by/4.0/
+// @description
+// @version      0.02
+// @license      BSD-3-Clause
 // @icon         https://raw.githubusercontent.com/KFxxx/xxxx/main/2875363.png
 // @include      *
 // @run-at       document-end
+// @note         20211101 v0.02 --- 補刪了 text hover 時候煩人的 tipssss (謝提醒
 // ==/UserScript==
-
 ;(function () {
-  "use strict"
+  'use strict'
   // 抓網頁使用的語言
   const pLang = document.documentElement.lang.toLowerCase().substr(0,5);
   // 抓自己使用的語言
@@ -24,7 +22,7 @@
   // 本體 CSS
   let xcss = document.createElement("style");
   xcss.innerHTML = "body{top:0px!important;}.goog-te-banner-frame.skiptranslate{display:none!important;}select.goog-te-combo,#xcancel{z-index: 88888888;opacity:0.5;position:fixed;font-size:8px; font-weight:bold;width:90px;left:5px;top:55px;color:#666;background:#f8f8f8;border:solid #aaa 2px;}#xcancel{top:85px;opacity:0;}select.goog-te-combo:hover,#xcancel:hover{opacity:1;}#google_translate_element{display:block;width:0px;overflow:hidden;}";
- // 關閉按鈕
+  // 關閉按鈕
   let button = document.createElement("button");
   button.innerHTML = "取消翻譯";
   button.id = "xcancel";
@@ -42,19 +40,21 @@
     }
   };
   // 翻譯選單/本體
-
   function googleTranslateElementInit(){
     new google.translate.TranslateElement({
       pageLanguage:"auto",
-      //可翻譯的語言，繁簡中，英語，日語，法語
+      // 可翻譯的語言，繁簡中，英語，日語，法語
       includedLanguages: "zh-TW,zh-CN,en,ja,fr",
     },"google_translate_element");
       document.body.appendChild(button);
     setTimeout(function(){
       var select = document.querySelector("select.goog-te-combo");
-      //自動翻譯語言
+      // 自動翻譯語言 
       select.value = "zh-TW";
       select.dispatchEvent(new Event("change"));
+      // 刪除顯示原文 POP
+      var xpopx = document.getElementById("goog-gt-tt");
+      xpopx.parentNode.removeChild(xpopx);
     },100);
   };
   (function() {
